@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    
+    <title>Trivia Game</title>
+</head>
+
+<body>
+    <div class="container start-container">
+        <div class="row start-row">
+            <div class="col text-center my-auto">
+                <img src="assets/images/jeff.jpg" alt="Jeff Probst" class="jeff" />
+                <button type="button" class="btn btn-success start-btn w-50">Start trivia!</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container results-container">
+        <div class="row results-row justify-content-center">
+            <div class="col-6 col-sm-6 col-md-12 col-lg=12 col-xl-12 ">
+                <img src="assets/images/wardog.jpg" alt="The Wardog" class="wardog mx-auto" />
+            </div>
+        </div>
+            <div class="row">
+                <div class="text-center col "> <!--my-auto-->
+                    <h2>Incredible Job!</h2>
+                    <h3>Correct answers: <span class="correct-answers"></span></h3>
+                    <h3>Incorrect answers: <span class="incorrect-answers"></span></h3>
+                    <h3>Unanswered questions: <span class="unanswered-questions"></span></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="exam">
+        <nav class="navbar sticky-top navbar-light">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item active mx-auto">
+                    <h1>NBA & F1 Trivia!</h1> <span class="sr-only">(current)</span>
+                </li>
+                <li class="nav-item">
+                    <h2 class="timer"><span class="seconds">120</span> Seconds Left</h2>
+                </li>
+            </ul>
+        </nav>
+
+
+        <div class="container text-center">
+            <div class="row">
+                <form class="col question-container">
+                    <h2 class="question-heading">1. What is Kobe Bryant's two numbers used in his career?</h2>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-one" id="q1a" value="option1">
+                        <label class="form-check-label" for="q1a">23 & 1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-one" id="q1b" value="option2">
+                        <label class="form-check-label" for="q1b">10 & 23</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-one" id="q1c" value="option3">
+                        <label class="form-check-label" for="q1c">24 & 8</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-one" id="q1d" value="option4">
+                        <label class="form-check-label" for="q1d">1 & 8</label>
+                    </div>
+                    <h2 class="question-heading">2.Which player has more Championship titles than Micheal Jordan?</h2>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-two" value="option1" id="q2a">
+                        <label class="form-check-label" for="q2a">Shaquille O'neal</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-two" value="option2" id="q2b">
+                        <label class="form-check-label" for="q2b">Robert Horry</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-two" value="option3" id="q2c">
+                        <label class="form-check-label" for="q2c">Hakeem Olajuwan</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-two" value="option4" id="q2d">
+                        <label class="form-check-label" for="q2d">Lebron James</label>
+                    </div>
+                    <h2 class="question-heading">3. Which F1 driver has the al time highest winning percentage in the sport??</h2>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-three" value="option1" id="q3a">
+                        <label class="form-check-label" for="q3a">Fernando Alonso</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-three" value="option2" id="q3b">
+                        <label class="form-check-label" for="q3b">Michael Schumacher</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-three" value="option3" id="q3c">
+                        <label class="form-check-label" for="q3c">Lewis Hamilton</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-three" value="option4" id="q3d">
+                        <label class="form-check-label" for="q3d">Juan Manuel Fangio</label>
+                    </div>
+                    <h2 class="question-heading">4. What year did Formula 1 have its first race??</h2>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-four" value="option1" id="q4a">
+                        <label class="form-check-label" for="q4a">1935</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-four" value="option2" id="q4b">
+                        <label class="form-check-label" for="q4b">1952</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-four" value="option3" id="q4c">
+                        <label class="form-check-label" for="q4c">1944</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-four" value="option4" id="q4d">
+                        <label class="form-check-label" for="q4d">1946</label>
+                    </div>
+                    <h2 class="question-heading">5. Who was the player drafted ahead of Micheal Jordan in the 1984 draft??</h2>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-five" value="option1" id="q5a">
+                        <label class="form-check-label" for="q5a">Sam Cooke</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-five" value="option2" id="q5b">
+                        <label class="form-check-label" for="q5b">Patrick Ewing</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-five" value="option3" id="q5c">
+                        <label class="form-check-label" for="q5c">Hakeem Olajuwon</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-five" value="option4" id="q5d">
+                        <label class="form-check-label" for="q5d">Bruce Stanley</label>
+                    </div>
+                    <h2 class="question-heading">6. How many seconds are allotted on the "Shot Clock" in the NBA?? </h2>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-six" value="option1" id="q6a">
+                        <label class="form-check-label" for="q6a">25</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-six" value="option2" id="q6b">
+                        <label class="form-check-label" for="q6b">18</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-six" value="option3" id="q6c">
+                        <label class="form-check-label" for="q6c">20</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-six" value="option4" id="q6d">
+                        <label class="form-check-label" for="q6d">24</label>
+                    </div>
+                    <h2 class="question-heading">7. Which NBA team has the most Championship titles?</h2>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-seven" value="option1" id="q7a">
+                        <label class="form-check-label" for="q7a">Chicago Bulls</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-seven" value="option2" id="q7b">
+                        <label class="form-check-label" for="q7b">Los Angeles Lakers</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-seven" value="option3" id="q7c">
+                        <label class="form-check-label" for="q7c">Boston Celtics</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-seven" value="option4" id="q7d">
+                        <label class="form-check-label" for="q7d">New York Knicks</label>
+                    </div>
+                    <h2 class="question-heading">8. Which two NBA teams have the same number of Championship titles?</h2>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-eight" value="option1" id="q8a">
+                        <label class="form-check-label" for="q8a">Knicks & Lakers</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-eight" value="option2" id="q8b">
+                        <label class="form-check-label" for="q8b">Bulls & Warriors</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-eight" value="option3" id="q8c">
+                        <label class="form-check-label" for="q8c">Spurs & Warriors</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-eight" value="option4" id="q8d">
+                        <label class="form-check-label" for="q8d">Detriot & 76ers</label>
+                    </div>
+                    <h2 class="question-heading">9. Which country was F1 champion Lewis Hamilton born?</h2>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-nine" value="option1" id="q9a">
+                        <label class="form-check-label" for="q9a">England</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-nine" value="option2" id="q9b">
+                        <label class="form-check-label" for="q9b">USA</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-nine" value="option3" id="q9c">
+                        <label class="form-check-label" for="q9c">Austria</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-nine" value="option4" id="q9d">
+                        <label class="form-check-label" for="q9d">Germany</label>
+                    </div>
+                    <h2 class="question-heading">10. Which Formula 1 team has had the most championship seasons in the last 10 years?</h2>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-ten" value="option1" id="q10a">
+                        <label class="form-check-label" for="q10a">Ferrari</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-ten" value="option2" id="q10b">
+                        <label class="form-check-label" for="q10b">Williams BMW</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-ten" value="option3" id="q10c">
+                        <label class="form-check-label" for="q10c">Mercedes Benz</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="question-ten" value="option4" id="q10d">
+                        <label class="form-check-label" for="q10d">Renualt</label>
+                    </div>
+                    <div class="footer-container">
+                        <footer class="fixed-bottom"><button type="button"
+                                class="btn btn-success last-button mx-auto">Submit answers</button></footer>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<script src="app.js"></script>
+</body>
+
+</html>
