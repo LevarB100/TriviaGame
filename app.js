@@ -54,6 +54,10 @@ $("#steer").click(function() {
   }
 });
 
+$("#reset").onclick(function() {
+  $("#reset")[0].reset();
+});
+
 // Quiz page unhides
 // Timer starts
 // User presses submit after they have completed quiz
