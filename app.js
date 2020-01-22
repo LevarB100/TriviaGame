@@ -1,6 +1,6 @@
 $(".questions1").hide();
 $("h1,h4,h3,h2").hide();
-
+$("#reset").hide();
 // intial things to create
 //   - correct answers
 const correctAnswers = [3];
@@ -40,6 +40,8 @@ $("#steer").click(function() {
       $("#start-div").show();
       $("#end-div").show();
       $("h2").hide();
+      $("#steer").hide();
+      $("#reset").show();
     }
   }
 
