@@ -55,7 +55,7 @@ $("#steer").click(function() {
 });
 
 $("#reset").onclick(function() {
-  $("#reset")[0].reset();
+  $[0].reset();
 });
 
 // Quiz page unhides
@@ -152,6 +152,8 @@ $("#submit").click(function() {
     totalIncorrect++;
     console.log("incorrect");
   }
+
+  stop();
 
   $("h3").show();
   $("#correctans").text(totalCorrect);
